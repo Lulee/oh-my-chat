@@ -1,6 +1,7 @@
 import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import contactIcon from "./assets/icon-contact.svg";
+import menuIcon from './assets/icon-menu.svg'
 import messageIcon from "./assets/icon-message.svg";
 import "./App.css";
 
