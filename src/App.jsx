@@ -42,7 +42,7 @@ const ThreadsPane = () => {
 
   return (
     <>
-      <header>
+      <header className="thread-top-menu">
         <form>
           <input type="text" maxLength={20} />
           <input type="submit" value="搜索对话" />
@@ -67,7 +67,7 @@ const ThreadsPane = () => {
   );
 };
 
-const MessagesPane = () => {
+const MessagesPane = () => (
   <>
     <header className="message-top-menu">
       <h1>小白</h1>
@@ -107,8 +107,8 @@ const MessagesPane = () => {
       <textarea placeholder="请输入消息..." />
       <input type="submit" value="发送" />
     </form>
-  </>;
-};
+  </>
+);
 
 function App() {
   const [activeView, setActiveView] = useState("chat");
