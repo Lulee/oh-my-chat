@@ -6,13 +6,13 @@
   background-color: #4095e5;
 }
 
-.root{
+.root {
   display: flex;
   flex-direction: row;
   height: 100%;
 }
 
-.root > nav{
+.root > nav {
   margin: 28px 0;
   flex: 0 0 80px;
   display: flex;
@@ -21,17 +21,17 @@
   align-items: center;
 }
 
-.root > aside{
+.root > aside {
   margin: 12px 0;
   border-radius: 20px 0 0 20px;
-  border-right:1px solid #9a9a9a;
+  border-right: 1px solid #9a9a9a;
   flex: 0 0 400px;
   display: flex;
   flex-direction: column;
   overflow: hidden;
   background-color: #efefef;
 }
-.root > main{
+.root > main {
   margin: 12px 12px 12px 0;
   border-radius: 0 20px 20px 0;
   flex-grow: 1;
@@ -41,7 +41,7 @@
   background-color: #fff;
 }
 
-.my-avatar{
+.my-avatar {
   border-radius: 50%;
   width: 48px;
   height: 48px;
@@ -55,16 +55,15 @@
   width: 100%;
 }
 
-.top-nav li{
+.top-nav li {
   height: 80px;
 }
 
-.top-nav li.active{
+.top-nav li.active {
   background-color: #ffffff33;
-
 }
 
-.top-nav li >a {
+.top-nav li > a {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -72,11 +71,108 @@
 }
 
 .top-nav li > a:hover,
-.top-nav li > a:active{
+.top-nav li > a:active {
+  /* RRGGbBBAA,八位的16进制最后两位代表透明度*/
   background-color: #ffffff11;
 }
 
-.top-nav li > a > img{
+.top-nav li > a > img {
   width: 2rem;
   height: 2rem;
+}
+
+/* ------ThreadPane */
+.thread-top-menu {
+  flex: 0 0 5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 1px solid #9a9a9a;
+  height: 80px;
+  background-color: #cecece;
+}
+
+.thread-top-menu input,
+.thread-top-menu button {
+  height: 2rem;
+}
+
+.thread-list{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  list-style: none;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.thread-list li{
+  height: 80px;
+}
+
+.thread-list li.active {
+  background-color: #ffffff99;
+}
+
+.thread-list li > a {
+  padding: 0 1.2rem;
+  display: flex;
+  align-items: center;
+  column-gap: 1.2rem;
+  height: 100%;
+}
+
+.thread-list li > a:hover,
+.thread-list li > a:active{
+  background-color: #ffffff77;
+}
+
+.thread-list li > a > .avatar {
+  border-radius: 50%;
+  flex: 0 0 2rem;
+  height: 2rem;
+  width: 2rem;
+  background-color: #eee;
+}
+
+.thread-list li > a > .thread {
+  flex:1;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-end;
+  overflow: hidden;
+}
+
+.thread .contact-name {
+  flex:2;
+  font-size: 1.2rem;
+  color: #000;
+}
+
+.thread .update-time{
+  flex:1;
+  color: #9a9a9a;
+}
+
+.thread .latest-message{
+  flex: 0 0 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #9a9a9a;
+}
+
+.message-top-menu{
+  flex: 0 0 5rem;
+  padding: 0 1.2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #9a9a9a;
+  height: 80px;
+ border-color: #efefef;
 }
