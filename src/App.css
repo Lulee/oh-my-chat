@@ -244,3 +244,196 @@
   flex: 1;
   height: 5rem;
 }
+
+/* ----------------ContactsPane */
+.contacts-top-menu {
+  flex: 0 0 5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 1px solid #9a9a9a;
+  height: 80px;
+  background-color: #cecece;
+}
+
+.contacts-top-menu input,
+.contacts-top-menu button {
+  height: 2rem;
+}
+
+.contacts-list {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  list-style: none;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.contacts-list li {
+  height: 80px;
+}
+
+.contacts-list li.active {
+  background-color: #ffffff99;
+}
+
+.contacts-list li > a {
+  padding: 0 1.2rem;
+  display: flex;
+  align-items: center;
+  column-gap: 1.2rem;
+  height: 100%;
+  text-decoration: none;
+}
+
+.contacts-list li > a:hover,
+.contacts-list li > a:active {
+  background-color: #ffffff77;
+}
+
+.contacts-list li > a > .avatar {
+  border-radius: 50%;
+  flex: 0 0 2rem;
+  height: 2rem;
+  width: 2rem;
+  background-color: #eee;
+}
+
+.contacts-list li > a > .contact-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.contact-info .contact-name {
+  font-size: 1.2rem;
+  color: #000;
+}
+
+.contact-info .contact-phone {
+  font-size: 0.9rem;
+  color: #9a9a9a;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ----------------ContactDetailPane */
+.contact-detail {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.contact-detail-header {
+  flex: 0 0 auto;
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #efefef;
+  gap: 1rem;
+  position: relative;
+  min-height: 200px;
+}
+
+.contact-detail-header > .avatar {
+  border-radius: 50%;
+  width: 4rem;
+  height: 4rem;
+  background-color: #eee;
+}
+
+.contact-detail-header > h1 {
+  font-size: 1.6rem;
+  margin: 0;
+  color: #000;
+}
+
+.contact-detail-header > button {
+  position: absolute;
+  top: 1.2rem;
+  right: 1.2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.contact-detail-header > button > img {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.contact-detail-content {
+  flex: 0 0 auto;
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  border-bottom: 1px solid #efefef;
+}
+
+.detail-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.detail-item .label {
+  font-size: 0.9rem;
+  color: #9a9a9a;
+  font-weight: 500;
+}
+
+.detail-item .value {
+  font-size: 1rem;
+  color: #000;
+}
+
+.contact-actions {
+  flex: 0 0 auto;
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.action-button {
+  padding: 0.8rem 1.2rem;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  color: #000;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.action-button:hover {
+  background-color: #f5f5f5;
+  border-color: #bbb;
+}
+
+.action-button.delete {
+  color: #d32f2f;
+  border-color: #d32f2f;
+}
+
+.action-button.delete:hover {
+  background-color: #ffebee;
+}
+
+.empty-state {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #9a9a9a;
+  font-size: 1.1rem;
+}
